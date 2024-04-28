@@ -9,6 +9,7 @@ public class GoBrolyGoGo {
 			   player3Name,//This is player 3's name
 			   player4Name;//This is player 4's name
 		System.out.println("Hi");
+		System.out.println("Testing");
 		AttackerClass p1 = new AttackerClass();//This variable calls the Player1 class
 		TankClass p2 = new TankClass();//This variable calls the Player2 class
 		MageClass p3 = new MageClass();//This variable calls the Player3 class
