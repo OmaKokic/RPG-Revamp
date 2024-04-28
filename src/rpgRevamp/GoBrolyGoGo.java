@@ -8,11 +8,6 @@ public class GoBrolyGoGo {
 			   player2Name,//This is player 2's name
 			   player3Name,//This is player 3's name
 			   player4Name;//This is player 4's name
-<<<<<<< HEAD
-		System.out.println("Hi");
-		System.out.println("Testing");
-=======
->>>>>>> branch 'main' of https://github.com/OmaKokic/RPG-Revamp
 		AttackerClass p1 = new AttackerClass();//This variable calls the Player1 class
 		TankClass p2 = new TankClass();//This variable calls the Player2 class
 		MageClass p3 = new MageClass();//This variable calls the Player3 class
