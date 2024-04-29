@@ -44,7 +44,8 @@ public class GoBrolyGoGo {
 			modeSelect = JOptionPane.showInputDialog("What mode do you want to play?\n\nStandard\nChallenge Mode");
 			if (modeSelect == null)
 			{
-				modeSelect = "";
+				modeSelect = "Standard";
+				validChoice = true;
 			}
 			else if (modeSelect.equalsIgnoreCase("Standard"))
 			{
