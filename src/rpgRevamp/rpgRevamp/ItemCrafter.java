@@ -1342,4 +1342,47 @@ public class ItemCrafter {
 	public static void reduceStaticMomentumProgress(int decreasedProgress) {
 		staticMomentumProgress -= decreasedProgress;
 	}
+	
+	public void addKiDragonBalls() {
+		player4Ki += 50;
+		if (player4Ki > 299)
+		{
+			player4ChargeNumber = 3;
+			player4Ki = 0;
+		}
+		else if (player4Ki > 199)
+		{
+			if (player4ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player4Ki = 0;
+			}
+			else if (player4ChargeNumber == 2)
+			{
+				player4ChargeNumber++;
+				player4Ki = 100;
+			}
+			else
+			{
+				player4ChargeNumber += 2;
+				player4Ki -= 200;
+			}
+		}
+		else if (player4Ki > 99)
+		{
+			if (player4ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player4Ki = 0;
+			}
+			else 
+			{
+				player4ChargeNumber++;
+				player4Ki -= 100;
+			}
+		}
+		if (player4ChargeNumber == MAX_CHARGE_NUMBER)
+		{
+			player4Ki = 0;
+		}
+		Items.addPoints(50);
+	}
 }

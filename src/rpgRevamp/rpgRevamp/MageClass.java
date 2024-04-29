@@ -959,4 +959,47 @@ public class MageClass {
 	public void addKiUltimateHighSpirit(int addedKi) {
 		player3Ki += addedKi / 100;
 	}
+	
+	public void addKiDragonBalls() {
+		player3Ki += 50;
+		if (player3Ki > 299)
+		{
+			player3ChargeNumber = 3;
+			player3Ki = 0;
+		}
+		else if (player3Ki > 199)
+		{
+			if (player3ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player3Ki = 0;
+			}
+			else if (player3ChargeNumber == 2)
+			{
+				player3ChargeNumber++;
+				player3Ki = 100;
+			}
+			else
+			{
+				player3ChargeNumber += 2;
+				player3Ki -= 200;
+			}
+		}
+		else if (player3Ki > 99)
+		{
+			if (player3ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player3Ki = 0;
+			}
+			else 
+			{
+				player3ChargeNumber++;
+				player3Ki -= 100;
+			}
+		}
+		if (player3ChargeNumber == MAX_CHARGE_NUMBER)
+		{
+			player3Ki = 0;
+		}
+		Items.addPoints(50);
+	}
 }

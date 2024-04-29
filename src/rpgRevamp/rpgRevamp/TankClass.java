@@ -949,4 +949,47 @@ public class TankClass {
 	public void addKiUltimateHighSpirit(int addedKi) {
 		player2Ki += addedKi / 100;
 	}
+	
+	public void addKiDragonBalls() {
+		player2Ki += 50;
+		if (player2Ki > 299)
+		{
+			player2ChargeNumber = 3;
+			player2Ki = 0;
+		}
+		else if (player2Ki > 199)
+		{
+			if (player2ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player2Ki = 0;
+			}
+			else if (player2ChargeNumber == 2)
+			{
+				player2ChargeNumber++;
+				player2Ki = 100;
+			}
+			else
+			{
+				player2ChargeNumber += 2;
+				player2Ki -= 200;
+			}
+		}
+		else if (player2Ki > 99)
+		{
+			if (player2ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player2Ki = 0;
+			}
+			else 
+			{
+				player2ChargeNumber++;
+				player2Ki -= 100;
+			}
+		}
+		if (player2ChargeNumber == MAX_CHARGE_NUMBER)
+		{
+			player2Ki = 0;
+		}
+		Items.addPoints(50);
+	}
 }

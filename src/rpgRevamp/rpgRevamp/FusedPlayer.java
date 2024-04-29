@@ -2078,4 +2078,47 @@ public class FusedPlayer {
 	public static void setPotaraFusion() {
 		potaraFusion = true;
 	}
+	
+	public void addKiDragonBalls() {
+		ki += 50;
+		if (ki > 299)
+		{
+			chargeNumber = 3;
+			ki = 0;
+		}
+		else if (ki > 199)
+		{
+			if (chargeNumber == MAX_CHARGE_NUMBER)
+			{
+				ki = 0;
+			}
+			else if (chargeNumber == 2)
+			{
+				chargeNumber++;
+				ki = 100;
+			}
+			else
+			{
+				chargeNumber += 2;
+				ki -= 200;
+			}
+		}
+		else if (ki > 99)
+		{
+			if (chargeNumber == MAX_CHARGE_NUMBER)
+			{
+				ki = 0;
+			}
+			else 
+			{
+				chargeNumber++;
+				ki -= 100;
+			}
+		}
+		if (chargeNumber == MAX_CHARGE_NUMBER)
+		{
+			ki = 0;
+		}
+		Items.addPoints(50);
+	}
 }

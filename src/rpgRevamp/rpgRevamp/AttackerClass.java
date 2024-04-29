@@ -1345,5 +1345,46 @@ public class AttackerClass {
 		player1ChargeNumber -= 2;
 	}
 	
-	
+	public void addKiDragonBalls() {
+		player1Ki += 50;
+		if (player1Ki > 299)
+		{
+			player1ChargeNumber = 3;
+			player1Ki = 0;
+		}
+		else if (player1Ki > 199)
+		{
+			if (player1ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player1Ki = 0;
+			}
+			else if (player1ChargeNumber == 2)
+			{
+				player1ChargeNumber++;
+				player1Ki = 100;
+			}
+			else
+			{
+				player1ChargeNumber += 2;
+				player1Ki -= 200;
+			}
+		}
+		else if (player1Ki > 99)
+		{
+			if (player1ChargeNumber == MAX_CHARGE_NUMBER)
+			{
+				player1Ki = 0;
+			}
+			else 
+			{
+				player1ChargeNumber++;
+				player1Ki -= 100;
+			}
+		}
+		if (player1ChargeNumber == MAX_CHARGE_NUMBER)
+		{
+			player1Ki = 0;
+		}
+		Items.addPoints(50);
+	}
 }

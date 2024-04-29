@@ -985,7 +985,7 @@ public class GoBrolyGoGo {
 		}
 		if (chosenItem.equalsIgnoreCase(useItem.getITEM1()))
 		{
-			if (useItem.getSmallHealAmount() <= 0)
+			if (useItem.getSmallHealItemAmount() <= 0)
 			{
 				chosenItem = "null";
 				JOptionPane.showMessageDialog(null, "There are no more " + useItem.getITEM1());
@@ -993,7 +993,7 @@ public class GoBrolyGoGo {
 		}
 		else if (chosenItem.equalsIgnoreCase(useItem.getITEM2()))
 		{
-			if (useItem.getLargeHealAmount() <= 0)
+			if (useItem.getLargeHealItemAmount() <= 0)
 			{
 				chosenItem = "null";
 				JOptionPane.showMessageDialog(null, "There are no more " + useItem.getITEM2());
@@ -3223,6 +3223,7 @@ public class GoBrolyGoGo {
 				JOptionPane.showMessageDialog(null, AttackerClass.getUltimateTag() + player1 + " is searching for the Dragon Balls");
 				System.out.println(AttackerClass.getUltimateTag() + player1 + " is searching for the Dragon Balls");
 				usedItem.findDragonBall();
+				player1.addKiDragonBalls();
 			}
 		}
 		else if (attackerTurn.equalsIgnoreCase("Fuse"))
@@ -19500,6 +19501,7 @@ public class GoBrolyGoGo {
 				{
 					if (player2Target1 && onePlayer.isOnePlayer())
 					{
+						validChoice = true;
 					}
 					else if (player2Target1)
 					{
@@ -19528,7 +19530,7 @@ public class GoBrolyGoGo {
 						else if (target1 != 1 && target2 != 1)
 						{
 							validChoice = false;
-							JOptionPane.showMessageDialog(null, "This player is not being attacked");
+							JOptionPane.showMessageDialog(null, player1 + " is not being attacked");
 						}
 						else
 						{
@@ -19545,7 +19547,7 @@ public class GoBrolyGoGo {
 						else if (target != 3 && target2 != 3)
 						{
 							validChoice = false;
-							JOptionPane.showMessageDialog(null, "This player is not being attacked");
+							JOptionPane.showMessageDialog(null, player3 + " is not being attacked");
 						}
 						else
 						{
@@ -19561,7 +19563,7 @@ public class GoBrolyGoGo {
 						else if (target != 4 && target2 != 4)
 						{
 							validChoice = false;
-							JOptionPane.showMessageDialog(null, "This player is not being attacked");
+							JOptionPane.showMessageDialog(null, player4 + " is not being attacked");
 						}
 						else
 						{
