@@ -15,7 +15,7 @@ public class GoBrolyGoGo {
 		String selectedDifficulty = "1";
 		String modeSelect = "";
 		boolean validChoice = false;
-		
+		System.out.println();
 		player1Name = JOptionPane.showInputDialog("What's player 1's name?");//This asks the user to pick a name for player 1
 		if (player1Name == null)
 		{
