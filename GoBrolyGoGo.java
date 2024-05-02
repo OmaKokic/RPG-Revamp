@@ -5334,6 +5334,7 @@ public class GoBrolyGoGo {
 				JOptionPane.showMessageDialog(null, TankClass.getUltimateTag() + player2 + " is searching for the Dragon Balls");
 				System.out.println(TankClass.getUltimateTag() + player2 + " is searching for the Dragon Balls");
 				usedItem.findDragonBall();
+				player2.addKiDragonBalls();
 			}
 		}
 		else if (tankTurn.equalsIgnoreCase("Fuse"))
@@ -7834,6 +7835,7 @@ public class GoBrolyGoGo {
 				JOptionPane.showMessageDialog(null, MageClass.getUltimateTag() + player3 + " is searching for the Dragon Balls");
 				System.out.println(MageClass.getUltimateTag() + player3 + " is searching for the Dragon Balls");
 				usedItem.findDragonBall();
+				player3.addKiDragonBalls();
 			}
 		}
 		else if (mageTurn.equalsIgnoreCase("Fuse"))
@@ -9807,6 +9809,7 @@ public class GoBrolyGoGo {
 				JOptionPane.showMessageDialog(null, ItemCrafter.getUltimateTag() + player4 + " is searching for the Dragon Balls");
 				System.out.println(ItemCrafter.getUltimateTag() + player4 + " is searching for the Dragon Balls");
 				usedItem.findDragonBall();
+				player4.addKiDragonBalls();
 			}
 		}
 		else if (itemCrafterTurn.equalsIgnoreCase("Fuse"))
@@ -21407,6 +21410,7 @@ public class GoBrolyGoGo {
 				JOptionPane.showMessageDialog(null, AttackerClass.getUltimateTag() + player1 + " is searching for the Dragon Balls");
 				System.out.println(AttackerClass.getUltimateTag() + player1 + " is searching for the Dragon Balls");
 				usedItem.findDragonBall();
+				fusion.addKiDragonBalls();
 			}
 		}
 	}
